@@ -2,7 +2,7 @@
 
 Let's get the code on your computer!
 
-## What is Cloning?
+## 1. What is Cloning?
 
 **Cloning** means downloading a copy of the project from GitHub to your computer.
 
@@ -10,7 +10,7 @@ Think of it like downloading a ZIP file, but with version control superpowers!
 
 ---
 
-## Prerequisites
+## 2. Prerequisites
 
 Before cloning, make sure you have:
 
@@ -20,9 +20,9 @@ Before cloning, make sure you have:
 
 ---
 
-## Step-by-Step Guide
+## 3. Step-by-Step Guide
 
-### Step 1: Open Terminal
+### 3.1 Open Terminal
 
 **Windows:**
 - Press `Win + R`
@@ -36,7 +36,7 @@ Before cloning, make sure you have:
 
 ---
 
-### Step 2: Navigate to Desired Folder
+### 3.2 Navigate to Desired Folder
 
 Choose where you want to save the project.
 
@@ -57,7 +57,7 @@ cd C:\Users\YourName\Projects
 
 ---
 
-### Step 3: Clone the Repository
+### 3.3 Clone the Repository
 
 Copy and paste this command:
 
@@ -82,7 +82,7 @@ Resolving deltas: 100% (5/5), done.
 
 ---
 
-### Step 4: Navigate into Project
+### 3.4 Navigate into Project
 
 ```bash
 cd acm-whatsapp-ai-agent
@@ -92,7 +92,7 @@ Now you're inside the project folder!
 
 ---
 
-### Step 5: Verify Files
+### 3.5 Verify Files
 
 List all files to make sure everything cloned correctly:
 
@@ -120,7 +120,7 @@ README.md
 
 ---
 
-## Project Structure
+## 4. Project Structure
 
 Here's what each file does:
 
@@ -140,7 +140,7 @@ acm-whatsapp-ai-agent/
 
 ---
 
-## Alternative: Download ZIP
+## 5. Alternative: Download ZIP
 
 Don't have Git? You can download a ZIP file instead:
 
@@ -152,17 +152,17 @@ Don't have Git? You can download a ZIP file instead:
 
 ---
 
-## Next: Install Dependencies
+## 6. Install Dependencies
 
 Now that you have the code, let's install the required Python packages:
 
-### Step 1: Create Virtual Environment
+### 6.1 Create Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-### Step 2: Activate Virtual Environment
+### 6.2 Activate Virtual Environment
 
 **Windows:**
 ```bash
@@ -178,7 +178,7 @@ You'll see `(.venv)` appear at the start of your command prompt.
 
 ---
 
-### Step 3: Install Requirements
+### 6.3 Install Requirements
 
 ```bash
 pip install -r requirements.txt
@@ -195,7 +195,7 @@ This installs:
 
 ---
 
-## Verify Installation
+## 7. Verify Installation
 
 Check if packages are installed:
 
@@ -212,7 +212,7 @@ python-dotenv          1.0.0
 
 ---
 
-## Quick Troubleshooting
+## 8. Quick Troubleshooting
 
 ### "git is not recognized" error?
 
@@ -246,7 +246,7 @@ Then try activating again.
 
 ---
 
-## File Checklist
+## 9. File Checklist
 
 Before moving forward, make sure you have:
 
@@ -259,7 +259,7 @@ Before moving forward, make sure you have:
 
 ---
 
-## What's Next?
+## 10. What's Next?
 
 You have the code and dependencies installed. Now let's look at the actual Python code!
 

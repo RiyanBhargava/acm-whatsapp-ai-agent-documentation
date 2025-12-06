@@ -4,7 +4,7 @@ Complete code for all three Python files with detailed explanations.
 
 ---
 
-## Overview
+## 1. Overview
 
 Our project consists of three main Python files:
 
@@ -16,7 +16,7 @@ Let's dive into each file!
 
 ---
 
-## File 1: `main.py`
+## 2. File 1: `main.py`
 
 **Purpose:** Main application controller that coordinates everything.
 
@@ -113,9 +113,9 @@ if __name__ == "__main__":
     main()
 ```
 
-### Key Sections Explained:
+### 2.1 Key Sections Explained
 
-#### 1. **Imports**
+#### 2.1.1 Imports
 ```python
 import os
 from gemini_parser import parse_command
@@ -127,7 +127,7 @@ from whatsapp_automation import WhatsAppAutomation
 
 ---
 
-#### 2. **API Key Check**
+#### 2.1.2 API Key Check
 ```python
 if not os.getenv('GEMINI_API_KEY'):
     print("ERROR: GEMINI_API_KEY not found in environment variables!")
@@ -137,7 +137,7 @@ if not os.getenv('GEMINI_API_KEY'):
 
 ---
 
-#### 3. **WhatsApp Initialization**
+#### 2.1.3 WhatsApp Initialization
 ```python
 wa = WhatsAppAutomation()
 wa.initialize_driver()
@@ -147,7 +147,7 @@ wa.initialize_driver()
 
 ---
 
-#### 4. **Main Command Loop**
+#### 2.1.4 Main Command Loop
 ```python
 while True:
     user_command = input("\nYou: ").strip()
@@ -172,7 +172,7 @@ while True:
 
 ---
 
-#### 5. **Error Handling**
+#### 2.1.5 Error Handling
 ```python
 except KeyboardInterrupt:
     print("\n\nInterrupted by user. Shutting down...")
@@ -185,7 +185,7 @@ finally:
 
 ---
 
-## File 2: `gemini_parser.py`
+## 3. File 2: `gemini_parser.py`
 
 **Purpose:** Uses Gemini AI to understand natural language commands.
 
@@ -286,9 +286,9 @@ if __name__ == "__main__":
         print(f"Parsed command: {json.dumps(result, indent=2)}")
 ```
 
-### Key Sections Explained:
+### 3.1 Key Sections Explained
 
-#### 1. **Environment Setup**
+#### 3.1.1 Environment Setup
 ```python
 load_dotenv()
 genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
@@ -298,7 +298,7 @@ genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
 
 ---
 
-#### 2. **System Prompt**
+#### 3.1.2 System Prompt
 ```python
 SYSTEM_PROMPT = """You are a WhatsApp message-sending agent.
 ...
@@ -313,7 +313,7 @@ SYSTEM_PROMPT = """You are a WhatsApp message-sending agent.
 
 ---
 
-#### 3. **Parse Function**
+#### 3.1.3 Parse Function
 ```python
 def parse_command(user_command):
     model = genai.GenerativeModel('gemini-2.5-flash')
@@ -332,7 +332,7 @@ def parse_command(user_command):
 
 ---
 
-#### 4. **JSON Extraction**
+#### 3.1.4 JSON Extraction
 ```python
 if '```json' in response_text:
     response_text = response_text.split('```json')[1].split('```')[0].strip()
@@ -341,7 +341,7 @@ if '```json' in response_text:
 
 ---
 
-#### 5. **Error Handling**
+#### 3.1.5 Error Handling
 ```python
 except json.JSONDecodeError as e:
     print(f"Error parsing JSON: {e}")
@@ -351,7 +351,7 @@ Catches and reports parsing errors gracefully.
 
 ---
 
-## File 3: `whatsapp_automation.py`
+## 4. File 3: `whatsapp_automation.py`
 
 **Purpose:** Controls Chrome browser to interact with WhatsApp Web.
 
@@ -490,9 +490,9 @@ if __name__ == "__main__":
     wa.close()
 ```
 
-### Key Sections Explained:
+### 4.1 Key Sections Explained
 
-#### 1. **Class Structure**
+#### 4.1.1 Class Structure
 ```python
 class WhatsAppAutomation:
     def __init__(self):
@@ -502,7 +502,7 @@ class WhatsAppAutomation:
 
 ---
 
-#### 2. **Chrome Options**
+#### 4.1.2 Chrome Options
 ```python
 chrome_options.add_argument("--user-data-dir=./chrome_profile")
 chrome_options.add_argument("--no-sandbox")
@@ -516,7 +516,7 @@ chrome_options.add_argument("--disable-dev-shm-usage")
 
 ---
 
-#### 3. **WebDriverWait**
+#### 4.1.3 WebDriverWait
 ```python
 WebDriverWait(self.driver, 60).until(
     EC.presence_of_element_located((By.XPATH, '//div[@contenteditable="true"]'))
@@ -531,7 +531,7 @@ WebDriverWait(self.driver, 60).until(
 
 ---
 
-#### 4. **XPath Selectors**
+#### 4.1.4 XPath Selectors
 ```python
 search_box = driver.find_element(By.XPATH, '//div[@contenteditable="true"][@data-tab="3"]')
 ```
@@ -546,7 +546,7 @@ A way to locate elements on a webpage.
 
 ---
 
-#### 5. **Sending Keys**
+#### 4.1.5 Sending Keys
 ```python
 search_box.send_keys(contact_name)
 message_box.send_keys(message)
@@ -559,9 +559,9 @@ message_box.send_keys(Keys.RETURN)
 
 ---
 
-## Running the Application
+## 5. Running the Application
 
-### Step 1: Set up environment
+### 5.1 Set up environment
 ```bash
 # Create virtual environment
 python -m venv .venv
@@ -575,22 +575,22 @@ pip install -r requirements.txt
 
 ---
 
-### Step 2: Configure API key
+### 5.2 Configure API key
 Create `.env` file:
 ```env
-GEMINI_API_KEY="your_api_key_here"
+GEMINI_API_KEY=your_api_key_here
 ```
 
 ---
 
-### Step 3: Run the application
+### 5.3 Run the application
 ```bash
 python main.py
 ```
 
 ---
 
-### Step 4: Use the agent
+### 5.4 Use the agent
 ```
 You: send message to John saying meeting at 3pm
 
@@ -605,9 +605,9 @@ Send this message? (y/n): y
 
 ---
 
-## Testing Individual Files
+## 6. Testing Individual Files
 
-### Test `gemini_parser.py`:
+### 6.1 Test `gemini_parser.py`
 ```bash
 python gemini_parser.py
 ```
@@ -615,7 +615,7 @@ Runs the test code at the bottom of the file.
 
 ---
 
-### Test `whatsapp_automation.py`:
+### 6.2 Test `whatsapp_automation.py`
 ```bash
 python whatsapp_automation.py
 ```
@@ -623,9 +623,9 @@ Opens WhatsApp and lets you manually test sending a message.
 
 ---
 
-## Common Code Patterns
+## 7. Common Code Patterns
 
-### 1. **Try-Except Blocks**
+### 7.1 Try-Except Blocks
 ```python
 try:
     # Risky operation
@@ -638,7 +638,7 @@ except Exception as e:
 
 ---
 
-### 2. **Context Managers (implicit)**
+### 7.2 Context Managers (implicit)
 ```python
 finally:
     wa.close()
@@ -647,7 +647,7 @@ finally:
 
 ---
 
-### 3. **String Formatting**
+### 7.3 String Formatting
 ```python
 print(f"→ Contact: {parsed['contact']}")
 print(f"→ Message: {parsed['message']}")
@@ -656,7 +656,7 @@ print(f"→ Message: {parsed['message']}")
 
 ---
 
-### 4. **Conditional Returns**
+### 7.4 Conditional Returns
 ```python
 if not parsed:
     return
@@ -665,7 +665,7 @@ if not parsed:
 
 ---
 
-## Dependencies Explained
+## 8. Dependencies Explained
 
 From `requirements.txt`:
 

@@ -1,6 +1,6 @@
 # Welcome to WhatsApp AI Agent Workshop 🤖
 
-## What You'll Build
+## 1. What You'll Build
 
 In this workshop, you'll create an intelligent WhatsApp automation tool that understands natural language commands and sends messages automatically!
 
@@ -14,7 +14,7 @@ You: send message to Mom saying I'll be late
 ✓ Message sent successfully!
 ```
 
-## Tech Stack
+## 2. Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
@@ -22,14 +22,14 @@ You: send message to Mom saying I'll be late
 | **Google Gemini API** | Understands natural language commands |
 | **Selenium** | Automates WhatsApp Web in your browser |
 
-## What You'll Learn
+## 3. What You'll Learn
 
 - 🧠 **AI Integration** - Connect to Google's Gemini API
 - 🤖 **Browser Automation** - Control web applications with Selenium
 - 💬 **Natural Language Processing** - Convert human language to actions
 - 🔧 **Python Development** - Build real-world applications
 
-## Prerequisites
+## 4. Prerequisites
 
 Before starting, make sure you have:
 

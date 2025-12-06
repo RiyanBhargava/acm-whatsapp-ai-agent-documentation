@@ -2,7 +2,7 @@
 
 Let's get your free API key to power the AI magic!
 
-## What is an API Key?
+## 1. What is an API Key?
 
 An API key is like a password that lets your code access Gemini AI. It's:
 - **Free** - Google provides generous free tier
@@ -11,9 +11,9 @@ An API key is like a password that lets your code access Gemini AI. It's:
 
 ---
 
-## Step-by-Step Guide
+## 2. Step-by-Step Guide
 
-### Step 1: Visit Google AI Studio
+### 2.1 Visit Google AI Studio
 
 Open your browser and go to:
 
@@ -23,13 +23,13 @@ Open your browser and go to:
 
 ---
 
-### Step 2: Sign In
+### 2.2 Sign In
 
 Sign in with your Google account (Gmail).
 
 ---
 
-### Step 3: Click "Get API Key"
+### 2.3 Click "Get API Key"
 
 Look for the **"Get API key"** button in the top navigation.
 
@@ -37,7 +37,7 @@ Look for the **"Get API key"** button in the top navigation.
 
 ---
 
-### Step 4: Create API Key
+### 2.4 Create API Key
 
 You'll see a dialog with options:
 
@@ -48,7 +48,7 @@ You'll see a dialog with options:
 
 ---
 
-### Step 5: Copy Your Key
+### 2.5 Copy Your Key
 
 Your API key will be displayed. Click the **copy icon** to copy it.
 
@@ -58,9 +58,9 @@ Your API key will be displayed. Click the **copy icon** to copy it.
 
 ---
 
-## Setting Up Your API Key
+## 3. Setting Up Your API Key
 
-### Step 1: Create `.env` File
+### 3.1 Create `.env` File
 
 In your project folder (`ai-agent-whatsapp`), create a file named exactly:
 
@@ -72,7 +72,7 @@ In your project folder (`ai-agent-whatsapp`), create a file named exactly:
 
 ---
 
-### Step 2: Add Your Key
+### 3.2 Add Your Key
 
 Open `.env` in a text editor and add:
 
@@ -89,7 +89,7 @@ GEMINI_API_KEY="AIzaSyABcDEfGh1234567890abcdefghIJKLMN"
 
 ---
 
-### Step 3: Save the File
+### 3.3 Save the File
 
 Save and close the `.env` file.
 
@@ -97,7 +97,7 @@ Save and close the `.env` file.
 
 ---
 
-## Verify It's Working
+## 4. Verify It's Working
 
 Your `.env` file should look like this:
 
@@ -116,7 +116,7 @@ ai-agent-whatsapp/
 
 ---
 
-## Security Best Practices
+## 5. Security Best Practices
 
 ### ✅ DO:
 - Keep `.env` file in your project root
@@ -131,7 +131,7 @@ ai-agent-whatsapp/
 
 ---
 
-## Troubleshooting
+## 6. Troubleshooting
 
 ### "API key not found" error?
 
@@ -154,7 +154,7 @@ Go back to [Google AI Studio](https://aistudio.google.com/) → API Keys → Cre
 
 ---
 
-## Usage Limits
+## 7. Usage Limits
 
 **Free Tier:**
 - ✅ 60 requests per minute
@@ -165,7 +165,7 @@ Go back to [Google AI Studio](https://aistudio.google.com/) → API Keys → Cre
 
 ---
 
-## Example `.env` File
+## 8. Example `.env` File
 
 Here's what your complete `.env` file should look like:
 
@@ -176,7 +176,7 @@ GEMINI_API_KEY="AIzaSyABcDEfGh1234567890abcdefghIJKLMN"
 
 ---
 
-## Next Steps
+## 9. Next Steps
 
 API key configured? Let's clone the code!
 
@@ -184,7 +184,7 @@ API key configured? Let's clone the code!
 
 ---
 
-## Quick Reference
+## 10. Quick Reference
 
 | Item | Details |
 |------|---------|

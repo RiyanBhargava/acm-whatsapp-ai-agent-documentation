@@ -2,7 +2,7 @@
 
 Understanding the system before we code.
 
-## The Big Picture
+## 1. The Big Picture
 
 Our WhatsApp AI Agent works in 4 simple steps:
 
@@ -15,7 +15,7 @@ graph LR
 
 ---
 
-## Step 1: Natural Language Input
+## 2. Step 1: Natural Language Input
 
 **You type in plain English:**
 - "send message to John saying hello"
@@ -26,7 +26,7 @@ The agent accepts any natural way you'd phrase a messaging command.
 
 ---
 
-## Step 2: AI Processing (Gemini API)
+## 3. Step 2: AI Processing (Gemini API)
 
 **What happens:**
 
@@ -49,7 +49,7 @@ Gemini extracts:
 
 ---
 
-## Step 3: Browser Automation (Selenium)
+## 4. Step 3: Browser Automation (Selenium)
 
 **What happens:**
 
@@ -63,7 +63,7 @@ Gemini extracts:
 
 ---
 
-## Architecture Diagram
+## 5. Architecture Diagram
 
 ```mermaid
 graph TB
@@ -87,11 +87,11 @@ graph TB
 
 ---
 
-## The Three Files
+## 6. The Three Files
 
 Our project is organized into three Python files:
 
-### 1. `main.py` - The Brain 🧠
+### 6.1 `main.py` - The Brain 🧠
 **Purpose:** Coordinates everything
 
 - Starts the application
@@ -104,7 +104,7 @@ Our project is organized into three Python files:
 
 ---
 
-### 2. `gemini_parser.py` - The Translator 🗣️
+### 6.2 `gemini_parser.py` - The Translator 🗣️
 **Purpose:** Understands natural language
 
 - Takes your command
@@ -116,7 +116,7 @@ Our project is organized into three Python files:
 
 ---
 
-### 3. `whatsapp_automation.py` - The Robot 🤖
+### 6.3 `whatsapp_automation.py` - The Robot 🤖
 **Purpose:** Controls the browser
 
 - Opens Chrome
@@ -128,7 +128,7 @@ Our project is organized into three Python files:
 
 ---
 
-## Data Flow Example
+## 7. Data Flow Example
 
 Let's trace what happens when you type a command:
 
@@ -170,7 +170,7 @@ success = wa.send_message("John", "meeting at 3pm")
 
 ---
 
-## Key Concepts
+## 8. Key Concepts
 
 ### API (Application Programming Interface)
 A way for different software to talk to each other. We use Gemini's API to access its AI capabilities.
@@ -186,7 +186,7 @@ Saving your WhatsApp login so you don't need to scan the QR code every time.
 
 ---
 
-## Why This Approach?
+## 9. Why This Approach?
 
 **Alternative: WhatsApp Business API**
 - ❌ Requires business verification
@@ -201,7 +201,7 @@ Saving your WhatsApp login so you don't need to scan the QR code every time.
 
 ---
 
-## Security & Privacy
+## 10. Security & Privacy
 
 **What's Safe:**
 - Your API key is stored locally in `.env` file
